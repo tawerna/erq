@@ -1,52 +1,15 @@
 ---
-layout: base
+layout: default
 ---
-
-{% include header.html type="post" %}
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-      <article role="main" class="blog-post">
-        {{ content }}
-      </article>
-
-      {% if page.tags.size > 0 %}
-        <div class="blog-tags">
-          Tagi:
-          {% if site.link-tags %}
-          {% for tag in page.tags %}
-            <a href="/tag/{{ tag }}">{{ tag }}</a>
-          {% endfor %}
-          {% else %}
-            {{ page.tags | join: ", " }}
-          {% endif %}
+<article class="entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="content">
+        <h2 class="title">{{ page.title | escape }} </h2>
+        <div class="post">
+            {{ content }}
         </div>
-      {% endif %}
-
-      {% if page.social-share %}
-        {% include social-share.html %}
-      {% endif %}
-
-      <ul class="pager blog-pager">
-        {% if page.previous.url %}
-        <li class="previous">
-          <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; poprzedni wpis</a>
-        </li>
-        {% endif %}
-        {% if page.next.url %}
-        <li class="next">
-          <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">następny wpis &rarr;</a>
-        </li>
-        {% endif %}
-      </ul>
-
-      {% if page.comments %}
-        <div class="disqus-comments">
-          {% include disqus.html %}
-        </div>
-      {% endif %}
     </div>
-  </div>
-</div>
+    <aside class="info">
+        <i class="fa fa-fw fa-calendar"></i> {{ page.date | date: "%Y-%m-%d" }} 
+        <i class="fa fa-fw fa-clock-o"></i> {{ page.date | date: "%k:%M" }}
+    </aside>
+</article>

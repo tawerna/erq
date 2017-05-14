@@ -1,89 +1,16 @@
-url: "http://erq.tawerna.net"
-baseurl: ""
-
-title: Erq'owy blog
+title: Erq'owy Blog
 description: Nie ma ślimaków i ślimakowych. Są tylko liście. A kto sądzi inaczej jest w błędzie.
+baseurl: ""
+url: "http://erq.tawerna.net" # the base hostname & protocol for your site, e.g. http://example.com
 
-navbar-links:
-  Tawerna: "http://tawerna.net"
-
-lang: pl
-
-avatar: "/img/icon.png"
-# title-img: /path/to/image
-
-# --- Footer options --- #
-#author:
-#  facebook: erq
-#  twitter: erq
-
-# Select which links to show in the footer
-footer-links-active:
-  rss: true
-  facebook: false
-  email: false
-  twitter: false
-  google-plus: false
-  github: false
-  reddit: false
-  linkedin: false
-  xing: false
-  stackoverflow: false
-  snapchat: false
-  instagram: false
-  youtube: false
-  spotify: false
-  telephone: false
-
-# Select which share links to show in posts
-share-links-active:
-  twitter: true
-  facebook: true
-  google: false
-  linkedin: false
-
-url-pretty: "erq.tawerna.net"
-
-excerpt_length: 50
-
-# Character used to separate site title and description in HTML document title
-# and RSS feed title
-title-separator: "-"
-
-# --- Don't need to touch anything below here (but you can if you want) --- #
-
-# Output options (more information on Jekyll's site)
-timezone: "Europe/Warsaw"
-markdown: kramdown
-highlighter: rouge
-permalink: /:categories/:title.html
-paginate: 5
+paginate: 10
 paginate_path: "/page/:num/"
 
-kramdown:
-  input: GFM
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      comments: true  # add comments to all blog posts
-      social-share: false # add social media sharing buttons to all blog posts
-  -
-    scope:
-      path: "" # all files
-    values:
-      layout: "page"
-      show-avatar: true
-
-link-tags: false
-
+# Build settings
+markdown: kramdown
 gems:
+  - jekyll-feed
   - jekyll-paginate
-
 exclude:
   - Gemfile
   - Gemfile.lock
