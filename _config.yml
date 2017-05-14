@@ -2,6 +2,7 @@ title: Erq'owy Blog
 description: Nie ma ślimaków i ślimakowych. Są tylko liście. A kto sądzi inaczej jest w błędzie.
 baseurl: ""
 url: "http://erq.tawerna.net" # the base hostname & protocol for your site, e.g. http://example.com
+author: Erq
 
 paginate: 10
 paginate_path: "/page/:num/"
