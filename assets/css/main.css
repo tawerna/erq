@@ -71,6 +71,18 @@ main.site-content {
     color: #d54e21;
 }
 
+.entry .post p {
+    margin: 1em;
+}
+
+.entry .post blockquote {
+    background: #f9f9f9;
+    border-left: 5px solid #ccc;
+    margin: 1em 5px;
+    padding: 0.25em 5px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
 .entry aside.info {
     padding: 1% 2%;
     background: #525E6B;
